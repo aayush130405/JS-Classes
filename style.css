@@ -1,0 +1,138 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(24, 90, 157, 0.18);
+    padding: 2.5rem 2rem 2rem 2rem;
+    width: 100%;
+    max-width: 420px;
+    min-width: 320px;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+.container:hover {
+    box-shadow: 0 12px 40px rgba(24, 90, 157, 0.25);
+}
+
+h1 {
+    color: #185a9d;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: #43cea2;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#quiz-container,
+#result-container {
+    margin-bottom: 1.5rem;
+}
+
+#question-text {
+    color: #185a9d;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    min-height: 48px;
+}
+
+#choices-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+#choices-list li {
+    background: #f7f7fa;
+    border-radius: 7px;
+    margin-bottom: 0.7rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.05rem;
+    color: #185a9d;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    box-shadow: 0 1px 4px rgba(24, 90, 157, 0.06);
+    text-align: left;
+    position: relative;
+}
+
+#choices-list li:hover,
+#choices-list li.selected {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    transform: scale(1.03);
+}
+
+#choices-list li.correct {
+    background: #43cea2;
+    color: #fff;
+}
+
+#choices-list li.incorrect {
+    background: #ff5e62;
+    color: #fff;
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(24, 90, 157, 0.08);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+button.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#score {
+    font-size: 2rem;
+    color: #185a9d;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+#restart-btn {
+    background: linear-gradient(90deg, #ff9966 0%, #ff5e62 100%);
+}
+
+#restart-btn:hover {
+    background: linear-gradient(90deg, #ff5e62 0%, #ff9966 100%);
+}
